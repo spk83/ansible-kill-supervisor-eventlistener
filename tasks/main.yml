@@ -1,0 +1,12 @@
+---
+- name: add kill-supervisor script
+  become: yes
+  become_user: root
+  with_items:
+    - d: /usr/local/bin
+      f: kill_supervisor.py
+      m: '0755'
+  template:
+    src: '{{item.f}}.j2'
+    dest: '{{item.d}}/{{item.f}}'
+    mode: '{{item.m}}'

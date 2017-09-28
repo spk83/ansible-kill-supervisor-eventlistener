@@ -1,0 +1,9 @@
+---
+
+supervisord_pidfile: /var/run/supervisord.pid
+
+kill_supervisor_eventlistener_process_name: foo
+
+# kill_supervisor_eventlistener_username: root
+
+# kill_supervisor_eventlistener_events: EXITED
