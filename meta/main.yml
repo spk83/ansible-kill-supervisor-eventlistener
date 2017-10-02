@@ -33,7 +33,7 @@ dependencies:
   - role: spk83.supervisord-eventlistener
     version: v1.0.0
     supervisord_eventlistener_name: kill-supervisor
-    supervisord_eventlistener_command: /usr/bin/kill_supervisor.py
+    supervisord_eventlistener_command: /usr/local/bin/kill_supervisor.py
     supervisord_eventlistener_username: '{{kill_supervisor_eventlistener_username | default("root")}}'
     supervisord_eventlistener_events: '{{kill_supervisor_eventlistener_events | default("EXITED")}}'
     supervisord_eventlistener_process_name: '{{kill_supervisor_eventlistener_process_name}}'
